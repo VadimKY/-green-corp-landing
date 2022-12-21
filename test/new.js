@@ -55,10 +55,13 @@ console.log(array.size)
 function count() {
     console.log("Количество элементов в массиве:", array.size);
 };
-count();*/
-ctx.beginPath();
-ctx.moveTo(100, 100);
-ctx.lineTo(200, 100);
-ctx.beginPath();
-ctx.moveTo(100, 150);
-ctx.lineTo(200, 150);
+count();
+let list = document.querySelector('#tasks');
+let items = document.querySelectorAll('#tasks li');
+let sorted = [...items].sort(function(a, b) {
+  return a.innerText.length - b.innerText.length;
+});
+list.append(...sorted);
+console.log(list);*/
+console.log("Привет");
+

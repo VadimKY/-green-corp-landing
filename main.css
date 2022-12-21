@@ -10,10 +10,18 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    position: sticky;
+    position: fixed;
     top: 0;
-    background-color:#fff;
+    background-color:rgba(255, 255, 255, 0);
     z-index: 1;
+    left: 0;
+    right: 0;
+    transition: box-shadow, background-color .25s ease;
+}
+
+.header__scrolled {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 12px 34px -11px rgb(65 62 101 / 10%);
 }
 
 .header__logo {
@@ -63,7 +71,7 @@ button {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 115px;
+    padding-top: 200px;
     padding-bottom: 115px;
     background: url('img/back.png') no-repeat;
     background-position: center;
@@ -158,7 +166,7 @@ button {
     border-radius: 15px;
     border: none;
 }
-.form__sumbit {
+.form__submit {
     font-size: 60px;
     margin-top: 40px;
 }
